@@ -9,3 +9,18 @@
   stroke: #9ecae1;
   stroke-width: 1.5px;
 }
+
+div.tooltip {	
+    position: absolute;			
+    text-align: center;	
+    left: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;			
+    padding: 2px;				
+    font: 9px sans-serif;		
+    background: lightsteelblue;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;		
+}
