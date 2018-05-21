@@ -84,21 +84,21 @@ graph.draw = (csv) => {
             return d._children ? "#3182bd" : d.children ? "#c6dbef" : "#fd8d3c";
         }
 
-        function getNodeText(link) {
-            return "<strong>Link</strong><br/>" + 
-                "Name: " + link.name + "<br/>";
+        function getNodeText(node) {
+            console.log(node);
+            return "<strong>Node</strong><br/>" + 
+                "Name: " + node.name + "<br/>";
         }
 
         function getLinkText(link) {
-            return "<strong>Node</strong><br/>" + 
+            console.log(link);
+            return "<strong>Link</strong><br/>" + 
                 "AbsenderIn: " + link.AbsenderIn + "<br/>" +
                 "AdressatIn: " + link.AdressatIn + "<br/>" +
                 "Titel: " + link.Titel_Name + "<br/>";
         }
 
         function drawTooltip(data, isNode) {
-            console.dir(data);
-            console.dir(isNode);
             var text = "";
             if (isNode) {
                 text = getNodeText(data);
