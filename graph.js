@@ -114,19 +114,19 @@ graph.draw = (csv) => {
         }
 
         function onNodeMouseOver(e) {
-            if (!e.preventDefault) {
+            if (!d3.event.defaultPrevented) {
                 drawTooltip(e, true);
             }
         }
 
         function onLinkMouseOver(e) {
-            if (!e.preventDefault) {
+            if (!d3.event.defaultPrevented) {
                 drawTooltip(e, false);
             }
         }
 
         function onMouseOut(e) {
-            if (!e.preventDefault) {
+            if (!d3.event.defaultPrevented) {
                 div.transition()
                     .duration(500)
                     .style("opacity", 0);
